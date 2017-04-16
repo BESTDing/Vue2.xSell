@@ -2,7 +2,7 @@
   <div class="goods">
     <div class="menu-wrapper" ref="menuWrapper">
       <ul>
-        <li class="menu-item" v-for="good in goods">
+        <li class="menu-item" v-for="(good, index) in goods" :class="{'current': currentIndex === index}">
           <span class="text border-1px">
             <span v-show="good.type > 0" class="icon" :class="classMap[good.type]"></span>
             {{ good.name }}
@@ -12,7 +12,7 @@
     </div>
     <div class="foods-wrapper" ref="foodsWrapper">
       <ul>
-        <li v-for="good in goods" class="food-list">
+        <li v-for="good in goods" class="food-list" ref="foodList">
           <h1 class="title">{{ good.name }}</h1>
           <ul>
             <li v-for="food in good.foods" class="food-item border-1px">
@@ -23,12 +23,11 @@
                 <h2 class="name">{{ food.name }}</h2>
                 <p class="desc">{{ food.description }}</p>
                 <div class="extra">
-                  <span>月售{{ food.sellCount }}份</span>
-                  <span>好评率{{food.rating}}%</span>
+                  <span class="count">月售{{ food.sellCount }}份</span><span>好评率{{food.rating}}%</span>
                 </div>
                 <div class="price">
-                  <span class="now">￥{{ food.price }}</span>
-                  <span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
+                  <span class="now">￥{{ food.price }}</span><span class="old"
+                                                                  v-show="food.oldPrice">￥{{food.oldPrice}}</span>
                 </div>
               </div>
             </li>
@@ -45,7 +44,9 @@
   export default {
     data() {
       return {
-        goods: []
+        goods: [],
+        listHeight: [],
+        scrollY: 0
       };
     },
     props: {
@@ -61,6 +62,7 @@
             this.goods = response.data.data;
             this.$nextTick(() => {
               this._initScroll();
+              this._calculateHeight();
             });
           }
         });
@@ -71,7 +73,35 @@
       _initScroll() {
         console.log(this.$refs.menuWrapper);
         this.menuScroll = new BScroll(this.$refs.menuWrapper, {});
-        this.foodScroll = new BScroll(this.$refs.foodsWrapper, {});
+        this.foodScroll = new BScroll(this.$refs.foodsWrapper, {
+          probeType: 3
+        });
+        this.foodScroll.on('scroll', (pos) => {
+          this.scrollY = Math.abs(Math.round(pos.y)) + 100;
+        });
+      },
+      _calculateHeight() {
+        let foodList = this.$refs.foodList;
+        let height = 0;
+        this.listHeight.push(height);
+        for (let i = 0; i < foodList.length; i++) {
+          let item = foodList[i];
+          height += item.clientHeight;
+          this.listHeight.push(height);
+        }
+      }
+    },
+    computed: {
+      currentIndex() {
+        for (let i = 0; i < this.listHeight.length; i++) {
+          let height1 = this.listHeight[i];
+          let height2 = this.listHeight[i + 1];
+          if (!height2 || this.scrollY >= height1 && this.scrollY < height2) {
+            console.log(i);
+            return i;
+          }
+        }
+        return 0;
       }
     }
   };
@@ -98,6 +128,14 @@
         height 54px
         line-height 14px
         padding 0 12px
+        &.current
+          position relative
+          z-index 10
+          margin-tp 1px
+          font-weight 700
+          background-color white
+          .text
+            border-none()
         .icon
           display inline-block
           width 16px
@@ -157,8 +195,9 @@
             color: rgb(147, 153, 159)
           .desc
             margin-bottom 8px
+            line-height 12px
           .extra
-            &.count
+            .count
               margin-right 12px
           .price
             font-weight 700
