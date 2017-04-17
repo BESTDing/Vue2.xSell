@@ -2,7 +2,8 @@
   <div class="goods">
     <div class="menu-wrapper" ref="menuWrapper">
       <ul>
-        <li class="menu-item" v-for="(good, index) in goods" :class="{'current': currentIndex === index}" @click="selectMenu(index, $event)">
+        <li class="menu-item" v-for="(good, index) in goods" :class="{'current': currentIndex === index}"
+            @click="selectMenu(index, $event)">
           <span class="text border-1px">
             <span v-show="good.type > 0" class="icon" :class="classMap[good.type]"></span>
             {{ good.name }}
@@ -35,11 +36,15 @@
         </li>
       </ul>
     </div>
+    <div>
+      <shopcart></shopcart>
+    </div>
   </div>
 </template>
 
 <script>
   import BScroll from 'better-scroll';
+  import shopcart from '../shopcart/shopcart.vue';
   const ERR_OK = 0;
   export default {
     data() {
@@ -115,6 +120,9 @@
         }
         return 0;
       }
+    },
+    components: {
+      shopcart
     }
   };
 </script>
