@@ -2,7 +2,7 @@
   <div class="goods">
     <div class="menu-wrapper" ref="menuWrapper">
       <ul>
-        <li class="menu-item" v-for="(good, index) in goods" :class="{'current': currentIndex === index}">
+        <li class="menu-item" v-for="(good, index) in goods" :class="{'current': currentIndex === index}" @click="selectMenu(index, $event)">
           <span class="text border-1px">
             <span v-show="good.type > 0" class="icon" :class="classMap[good.type]"></span>
             {{ good.name }}
@@ -70,13 +70,25 @@
     mounted() {
     },
     methods: {
+      selectMenu(index, event) {
+        if (!event._constructed) {
+          return;
+        }
+        let foodList = this.$refs.foodList;
+        let el = foodList[index];
+        this.foodsScroll.scrollToElement(el, 300);
+        console.log(index);
+        console.log(event);
+      },
       _initScroll() {
         console.log(this.$refs.menuWrapper);
-        this.menuScroll = new BScroll(this.$refs.menuWrapper, {});
-        this.foodScroll = new BScroll(this.$refs.foodsWrapper, {
+        this.menuScroll = new BScroll(this.$refs.menuWrapper, {
+          click: true
+        });
+        this.foodsScroll = new BScroll(this.$refs.foodsWrapper, {
           probeType: 3
         });
-        this.foodScroll.on('scroll', (pos) => {
+        this.foodsScroll.on('scroll', (pos) => {
           this.scrollY = Math.abs(Math.round(pos.y)) + 100;
         });
       },
