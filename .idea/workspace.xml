@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cacc618-f1da-475e-8e9a-b3dadd5b7efd" name="Default" comment="完成购物车样式">
+    <list default="true" id="2cacc618-f1da-475e-8e9a-b3dadd5b7efd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/cartcontrol/cartcontrol.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/fonts/sell-icon.eot" afterPath="$PROJECT_DIR$/src/common/fonts/sell-icon.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/fonts/sell-icon.ttf" afterPath="$PROJECT_DIR$/src/common/fonts/sell-icon.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/fonts/sell-icon.woff" afterPath="$PROJECT_DIR$/src/common/fonts/sell-icon.woff" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/fonts/sell-icon.svg" afterPath="$PROJECT_DIR$/src/common/fonts/sell-icon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/stylus/icon.styl" afterPath="$PROJECT_DIR$/src/common/stylus/icon.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/stylus/index.css" afterPath="$PROJECT_DIR$/src/common/stylus/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/goods/goods.vue" afterPath="$PROJECT_DIR$/src/components/goods/goods.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/shopcart/shopcart.vue" afterPath="$PROJECT_DIR$/src/components/shopcart/shopcart.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,14 +28,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="goods.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="goods.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/goods/goods.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="4" column="80" lean-forward="false" selection-start-line="4" selection-start-column="80" selection-end-line="4" selection-end-column="80" />
+            <state relative-caret-position="3106">
+              <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
               <folding>
-                <element signature="e#1625#1661#0" expanded="true" />
+                <element signature="e#1757#1793#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/start/start.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="706">
+              <caret line="84" column="23" lean-forward="true" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cartcontrol.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/cartcontrol/cartcontrol.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icon.styl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/stylus/icon.styl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -38,8 +73,8 @@
       <file leaf-file-name="shopcart.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/shopcart/shopcart.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+            <state relative-caret-position="267">
+              <caret line="69" column="44" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -47,6 +82,13 @@
       </file>
       <file leaf-file-name="外卖03_商品页_购物车详情_spec.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resource/标注/外卖03_商品页_购物车详情_spec.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="外卖01_商品页_spec.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resource/标注/外卖01_商品页_spec.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -100,15 +142,17 @@
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/components/ratings/ratings.vue" />
         <option value="$PROJECT_DIR$/src/components/seller/seller.vue" />
-        <option value="$PROJECT_DIR$/src/common/stylus/icon.styl" />
         <option value="$PROJECT_DIR$/src/common/stylus/base.styl" />
         <option value="$PROJECT_DIR$/src/components/start/start.vue" />
         <option value="$PROJECT_DIR$/src/components/header/header.vue" />
         <option value="$PROJECT_DIR$/src/common/stylus/mixin.styl" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/goods/goods.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
+        <option value="$PROJECT_DIR$/src/components/cartcontral/cartcontral.vue" />
         <option value="$PROJECT_DIR$/src/components/shopcart/shopcart.vue" />
+        <option value="$PROJECT_DIR$/src/common/stylus/icon.styl" />
+        <option value="$PROJECT_DIR$/src/components/goods/goods.vue" />
+        <option value="$PROJECT_DIR$/src/components/cartcontrol/cartcontrol.vue" />
       </list>
     </option>
   </component>
@@ -270,7 +314,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shopcart" />
+              <option name="myItemId" value="header" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,11 +332,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stylus" />
+              <option name="myItemId" value="header" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratings" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,7 +358,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cartcontrol" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,6 +423,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/common/fonts" />
       <recent name="$PROJECT_DIR$/src/components/goods" />
       <recent name="$PROJECT_DIR$/src/components/header" />
       <recent name="$PROJECT_DIR$/src/components/start" />
@@ -470,7 +523,7 @@
       <option name="presentableId" value="Default" />
       <updated>1491655473669</updated>
       <workItem from="1491655475472" duration="15474000" />
-      <workItem from="1491725139447" duration="59327000" />
+      <workItem from="1491725139447" duration="63998000" />
     </task>
     <task id="LOCAL-00001" summary="完成商品和菜单的滚动联动">
       <created>1492356771868</created>
@@ -493,11 +546,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492446223276</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="完成购物车样式">
+      <created>1492530212299</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1492530212300</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74801000" />
+    <option name="totallyTimeSpent" value="79472000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,9 +572,9 @@
     <frame x="846" y="0" width="1074" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32953465" sideWeight="0.4844904" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.4844904" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.49621212" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5037879" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -532,23 +592,24 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.49621212" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.49621212" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5037879" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5037879" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293556" sideWeight="0.4844904" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32953465" sideWeight="0.4844904" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20922832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29261363" sideWeight="0.5155096" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,16 +650,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resource/PSD/外卖06_商家页.psd">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/PSD/外卖06_商家页_spec.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resource/img/bulletin@2x.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -672,14 +723,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/start/star36_off@2x.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/start/start.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="84" column="23" lean-forward="true" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resource/外卖05_评价页.jpg">
@@ -770,24 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header/header.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="15" column="72" lean-forward="false" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
-          <folding>
-            <element signature="n#div#0;n#transition#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#3129#3234#0" expanded="false" />
-            <element signature="e#3258#4984#0" expanded="false" />
-            <element signature="e#3304#3386#0" expanded="false" />
-            <element signature="e#3496#3873#0" expanded="false" />
-            <element signature="e#3540#3754#0" expanded="false" />
-            <element signature="e#5009#5610#0" expanded="false" />
-            <element signature="e#5629#5752#0" expanded="false" />
-            <element signature="e#6458#6773#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/stylus/mixin.styl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -827,14 +852,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/stylus/icon.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -844,11 +861,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resource/外卖02_商品页_公告及优惠信息.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/标注/外卖01_商品页_spec.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -883,26 +895,80 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/shopcart/shopcart.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="69" column="44" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/stylus/icon.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/header/ratings/ratings.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/header/header.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1094">
+          <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="28" />
+          <folding>
+            <element signature="e#3129#3234#0" expanded="false" />
+            <element signature="e#3258#4984#0" expanded="false" />
+            <element signature="e#3304#3386#0" expanded="false" />
+            <element signature="e#3496#3873#0" expanded="false" />
+            <element signature="e#3540#3754#0" expanded="false" />
+            <element signature="e#5009#5610#0" expanded="false" />
+            <element signature="e#5629#5752#0" expanded="false" />
+            <element signature="e#6458#6773#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/标注/外卖01_商品页_spec.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resource/标注/外卖03_商品页_购物车详情_spec.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shopcart/shopcart.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/start/start.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        <state relative-caret-position="706">
+          <caret line="84" column="23" lean-forward="true" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/goods/goods.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="4" column="80" lean-forward="false" selection-start-line="4" selection-start-column="80" selection-end-line="4" selection-end-column="80" />
+        <state relative-caret-position="3106">
+          <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
           <folding>
-            <element signature="e#1625#1661#0" expanded="true" />
+            <element signature="e#1757#1793#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cartcontrol/cartcontrol.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
