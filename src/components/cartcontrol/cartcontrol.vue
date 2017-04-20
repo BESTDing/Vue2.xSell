@@ -66,7 +66,7 @@
       opacity 1
       transform rotate(180deg)
     .move-enter, .move-leave-active
-      transform: translateX(10px);
+      transform: translateX(24px);
       opacity: 0;
 
     .move-enter-active
