@@ -16,7 +16,7 @@
         <li v-for="good in goods" class="food-list" ref="foodList">
           <h1 class="title">{{ good.name }}</h1>
           <ul>
-            <li v-for="food in good.foods" class="food-item border-1px">
+            <li @click="selectFood(food, $event)" v-for="food in good.foods" class="food-item border-1px">
               <div class="icon">
                 <img :src="food.icon">
               </div>
@@ -31,7 +31,7 @@
                                                                   v-show="food.oldPrice">￥{{food.oldPrice}}</span>
                 </div>
                 <div class="cartcontrol-wrapper">
-                  <cartcontrol :food="food" @add="_drop"></cartcontrol>
+                  <cartcontrol :food="food"  @add="_drop"></cartcontrol>
                 </div>
               </div>
             </li>
@@ -42,6 +42,7 @@
     <div>
       <shopcart ref="shopcart" :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice" :selectFoods="selectFoods"></shopcart>
     </div>
+    <food :food="selectedFood" @add="_drop" ref="food"></food>
   </div>
 </template>
 
@@ -49,6 +50,7 @@
   import BScroll from 'better-scroll';
   import shopcart from '../shopcart/shopcart.vue';
   import cartcontrol from '../cartcontrol/cartcontrol.vue';
+  import food from '../food/food.vue';
 
   const ERR_OK = 0;
   export default {
@@ -56,7 +58,8 @@
       return {
         goods: [],
         listHeight: [],
-        scrollY: 0
+        scrollY: 0,
+        selectedFood: {}
       };
     },
     props: {
@@ -89,6 +92,13 @@
         this.foodsScroll.scrollToElement(el, 300);
         console.log(index);
         console.log(event);
+      },
+      selectFood(food, event) {
+        if (!event._constructed) {
+          return;
+        }
+        this.selectedFood = food;
+        this.$refs.food.show();
       },
       _initScroll() {
         console.log(this.$refs.menuWrapper);
@@ -148,7 +158,8 @@
     },
     components: {
       shopcart,
-      cartcontrol
+      cartcontrol,
+      food
     }
   };
 </script>
