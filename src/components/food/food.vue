@@ -50,7 +50,7 @@
   import split from '../split/split.vue';
   import ratingselect from '../ratingselect/ratingselect.vue';
 
-  const POSITIVE = 0;
+  const POSITIVE = 1;
   const NEGATIVE = 0;
   const ALL = 2;
 
@@ -76,7 +76,7 @@
       show() {
         this.showFlag = true;
         /* 初始化ratingselect props */
-        this.selectType = ALL;
+        this.selectType = POSITIVE;
         this.onlyContent = true;
         this.$nextTick(() => {
           if (!this.scroll) {
@@ -211,5 +211,9 @@
         padding 0 8px
         font-size 12px
         color rgb(77, 85, 93)
-
+    .rating
+      .title
+        margin-top 18px
+        margin-bottom 6px
+        margin-left 18px
 </style>
