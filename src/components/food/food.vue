@@ -19,7 +19,7 @@
             <span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
           </div>
           <div class="cartcontrol-wrapper">
-            <cartcontrol  :food="food"></cartcontrol>
+            <cartcontrol :food="food"></cartcontrol>
           </div>
           <transition name="fade">
             <div class="buy" @click="addFirst($event)" v-show="!food.count || food.count === 0">加入购物车</div>
@@ -36,7 +36,26 @@
           <ratingselect :desc="desc"
                         :select-type="selectType"
                         :only-content="onlyContent"
-                        :ratings="food.ratings"></ratingselect>
+                        :ratings="food.ratings"
+                        v-on:ratingtypeselect="ratingtype_select"
+                        v-on:contenttoggle="content_toggle"></ratingselect>
+          <div class="rating-wrapper">
+            <ul v-show="food.ratings && food.ratings.length">
+              <li v-show="needShow(rating.rateType, rating.text)" class="rating-item border-1px"
+                  v-for="rating in food.ratings">
+                <div class="user">
+                  <span class="name">{{ rating.username }}</span>
+                  <img class="avatar" width="12" height="12" :src="rating.avatar">
+                </div>
+                <div class="time">{{ rating.rateTime | formateDate }}</div>
+                <p class="text">
+                  <span :class="{'icon-thumb_up':rating.rateType===0,'icon_thumb_down':rating.rateType===1}"></span>
+                  {{ rating.text }}
+                </p>
+              </li>
+            </ul>
+            <div class="no-rating" v-show="isNoratings">暂无评价</div>
+          </div>
         </div>
       </div>
     </div>
@@ -49,9 +68,10 @@
   import Vue from 'vue';
   import split from '../split/split.vue';
   import ratingselect from '../ratingselect/ratingselect.vue';
+  import { formatDate } from '../../common/js/date.js';
 
-  const POSITIVE = 1;
-  const NEGATIVE = 0;
+  const POSITIVE = 0;
+  const NEGATIVE = 1;
   const ALL = 2;
 
   export default{
@@ -98,6 +118,51 @@
         console.log(event.target);
         this.$emit('add', event.target);
         Vue.set(this.food, 'count', 1);
+      },
+      needShow(type, text) {
+        if (this.onlyContent && !text) {
+          return false;
+        }
+        if (this.selectType === ALL) {
+          return true;
+        } else {
+          return type === this.selectType;
+        }
+      },
+      ratingtype_select(type) {
+        this.selectType = type;
+        this.$nextTick(() => {
+          this.scroll.refresh();
+        });
+      },
+      content_toggle(onlyContent) {
+        this.onlyContent = onlyContent;
+        this.$nextTick(() => {
+          this.scroll.refresh();
+        });
+      }
+    },
+    computed: {
+      isNoratings() {
+        /*
+         *判断是否显示暂无评价
+         */
+        var that = this;
+        if (!this.food.ratings || !this.food.ratings.length) {
+          return true;
+        } else if (this.food.ratings.filter(function (rating) {
+          return that.needShow(rating.rateType, rating.text);
+        }).length === 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    },
+    filters: {
+      formateDate(time) {
+        let date = new Date(time);
+        return formatDate(date, 'yyyy-MM-dd hh:mm');
       }
     },
     components: {
@@ -108,7 +173,9 @@
   };
 </script>
 
-<style  lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus">
+  @import "../../common/stylus/mixin.styl"
+
   .food
     position fixed
     left 0
@@ -162,7 +229,7 @@
           font-size 10px
           color rgb(147, 153, 159)
         .sell-count
-          margin-right  12px
+          margin-right 12px
       .price
         font-weight 700
         line-height 24px
@@ -216,4 +283,47 @@
         margin-top 18px
         margin-bottom 6px
         margin-left 18px
+      .rating-wrapper
+        padding 0 18px
+        .rating-item
+          position relative
+          padding 16px 0
+          border-1px(rgab(7, 17, 27, 0.1))
+          .user
+            position absolute
+            right: 0
+            top: 16px
+            font-size: 0
+            line-height 12px
+            .name
+              display: inline-block
+              vertical-align top
+              font-size 10px
+              color rgb(147, 153, 159)
+              margin-right 6px
+            .avatar
+              border-radius 50%
+
+          .time
+            margin-bottom 6px
+            line-height 12px
+            font-size 10px
+            color rgab(7, 17, 27, 0.1)
+          .text
+            line-height 16px
+            font-size 12px
+            color rgb(7, 17, 27)
+            .icon-thumb_up, icon-thumb_down
+              margin-right 4px
+              font-size 12px
+              line-height 24px
+            .icon-thumb_up
+              color rgb(0, 160, 220)
+            .icon-thumb_down
+              color rgab(7, 17, 27, 0.1)
+        .no-rating
+          padding 16px 0
+          font-size 12px
+          color rgab(7, 17, 27, 0.1)
+
 </style>
