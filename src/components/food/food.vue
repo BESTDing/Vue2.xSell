@@ -320,7 +320,7 @@
             .icon-thumb_up
               color rgb(0, 160, 220)
             .icon-thumb_down
-              color rgab(7, 17, 27, 0.1)
+              color rgba(7, 17, 27, 0.1)
         .no-rating
           padding 16px 0
           font-size 12px
