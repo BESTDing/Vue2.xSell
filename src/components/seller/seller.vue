@@ -28,6 +28,10 @@
             </div>
           </li>
         </ul>
+        <div class="favorite" @click="toggleClick($event)">
+          <span class="icon-favorite" :class="{active: favorite}"></span>
+          <span class="text">{{ favoriteText }}</span>
+        </div>
       </div>
       <split></split>
       <div class="bulletin">
@@ -70,6 +74,11 @@
   import BScroll from 'better-scroll';
 
   export default {
+    data() {
+      return {
+        favorite: true
+      };
+    },
     props: {
       seller: {
         type: Object
@@ -125,6 +134,17 @@
             }
           });
         }
+      },
+      toggleClick(event) {
+        if (!event._constructed) {
+          return;
+        }
+        this.favorite = !this.favorite;
+      }
+    },
+    computed: {
+      favoriteText() {
+        return this.favorite ? '已收藏' : '收藏';
       }
     }
   };
@@ -142,6 +162,25 @@
     .overview
       position relative
       padding 18px
+      .favorite
+        position absolute
+        right 11px
+        top 18px
+        text-align center
+        width 50px
+        .icon-favorite
+          display block
+          margin-bottom 4px
+          line-height 24px
+          font-size 24px
+          color #d4d6d9
+          &.active
+            color rgb(240, 20, 20)
+        .text
+          font-size 10px
+          line-height 10px
+          color rgb(77, 85, 93)
+
       .title
         margin-bottom 8px
         line-height 14px
