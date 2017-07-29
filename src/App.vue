@@ -15,7 +15,9 @@
     </div>
     <!-- 路由出口 -->
     <!-- 路由匹配到的组件将渲染在这里 -->
-    <router-view :seller="seller"></router-view>
+    <keep-alive>
+      <router-view :seller="seller"></router-view>
+    </keep-alive>
 
   </div>
 </template>
@@ -27,21 +29,29 @@
 
   import header from './components/header/header.vue';
 //  import goods from 'components/goods/goods.vue';
+  import {urlParse} from 'common/js/url.js';
 
   const ERR_OK = 0;
   export default {
     data() {
       return {
-        seller: {},
+        seller: {
+          id: (() => {
+            let queryParam = urlParse();
+            console.log(1);
+            console.log(queryParam);
+            return queryParam.id;
+          })()
+        },
         itemType: 0
       };
     },
     created() {
-      this.$http.get('/api/seller').then((response) => {
+      this.$http.get(`/api/seller?id={seller.id}`).then((response) => {
 //        console.log(response);
         if (response.data.errno === ERR_OK) {
-          this.seller = response.data.data;
-          console.log(this.seller);
+          this.seller = Object.assign({}, this.seller, response.data.data);
+//          console.log(this.seller);
         }
       });
     },
